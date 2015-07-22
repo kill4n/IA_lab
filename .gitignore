@@ -2,3 +2,8 @@
 ia_lab/CMakeLists.txt.user
 
 ia_lab/build/*
+
+Core_sharp/IA_Laboratorios/IA_Laboratorio1/bin/*
+
+Core_sharp/IA_Laboratorios/IA_Laboratorio1/obj/*
+
