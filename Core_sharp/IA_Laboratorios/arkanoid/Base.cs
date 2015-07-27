@@ -15,7 +15,7 @@ namespace arkanoid
         /// <summary>
         /// Velocidad de la base.
         /// </summary>
-        public double spped = 0.1; 
+        public double speed = 10;
         #endregion
 
         /// <summary>
@@ -29,12 +29,21 @@ namespace arkanoid
         /// <summary>
         /// Mover la base *funcion a dejar abierta*.
         /// </summary>
-        public void mover()
+        public void moverDerecha()
         {
-            var tmpX = X + spped;
+            var tmpX = X + speed;
             if ((tmpX > 0) & (tmpX < 800 - tamano))
             {
-                X += spped;
+                X += speed;
+            }
+        }
+
+        public void moverIzquierda()
+        {
+            var tmpX = X - speed;
+            if ((tmpX > 0) & (tmpX < 800 - tamano))
+            {
+                X -= speed;
             }
         }
         /// <summary>

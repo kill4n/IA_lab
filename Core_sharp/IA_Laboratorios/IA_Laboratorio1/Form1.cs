@@ -1,4 +1,5 @@
-﻿using System;
+﻿using arkanoid;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,14 +15,25 @@ namespace IA_Laboratorio1
         public Form1()
         {
             InitializeComponent();
-            
+            this.KeyPreview = true;
             timer1.Start();
         }
 
-       
         private void timer1_Tick(object sender, EventArgs e)
         {
             arkanoid1.refreshGame();
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.A)
+            {
+                arkanoid1.movePad(DirPad.Izquierda);
+            }
+            if (e.KeyCode == Keys.D)
+            {
+                arkanoid1.movePad(DirPad.Derecha);
+            }
         }
     }
 }

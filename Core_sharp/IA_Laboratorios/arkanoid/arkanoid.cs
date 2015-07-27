@@ -9,6 +9,11 @@ using System.Windows.Forms;
 
 namespace arkanoid
 {
+    public enum DirPad
+    {
+        Derecha,
+        Izquierda
+    }
     public partial class arkanoid : UserControl
     {
         #region Variables
@@ -17,9 +22,9 @@ namespace arkanoid
         Graphics g;
         bola b;
         Base padd;
-        Bloque[,] bloques = new Bloque[10, 6]; 
+        Bloque[,] bloques = new Bloque[10, 6];
         #endregion
-     
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -84,11 +89,25 @@ namespace arkanoid
             for (int i = 0; i < 10; i++)
                 for (int j = 0; j < 6; j++)
                     bloques[i, j].Pintar(g);
-            padd.mover();
 
             b.mover();
 
             pictureBox1.Image = wld;
+        }
+
+        public void movePad(DirPad dir)
+        {
+            switch (dir)
+            {
+                case DirPad.Derecha:
+                    padd.moverDerecha();
+                    break;
+                case DirPad.Izquierda:
+                    padd.moverIzquierda();
+                    break;
+                default:
+                    break;
+            }
         }
 
     }

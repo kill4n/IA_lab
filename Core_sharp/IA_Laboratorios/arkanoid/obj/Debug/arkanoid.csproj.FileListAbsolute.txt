@@ -7,8 +7,8 @@ C:\Users\Crhisitan\Documents\GitHub\IA_lab\Core_sharp\IA_Laboratorios\arkanoid\o
 C:\Users\Crhisitan\Documents\GitHub\IA_lab\Core_sharp\IA_Laboratorios\arkanoid\obj\Debug\arkanoid.pdb
 C:\Users\killan\Documents\GitHub\IA_lab\Core_sharp\IA_Laboratorios\arkanoid\bin\Debug\arkanoid.dll
 C:\Users\killan\Documents\GitHub\IA_lab\Core_sharp\IA_Laboratorios\arkanoid\bin\Debug\arkanoid.pdb
-C:\Users\killan\Documents\GitHub\IA_lab\Core_sharp\IA_Laboratorios\arkanoid\obj\Debug\arkanoid.csprojResolveAssemblyReference.cache
 C:\Users\killan\Documents\GitHub\IA_lab\Core_sharp\IA_Laboratorios\arkanoid\obj\Debug\arkanoid.arkanoid.resources
 C:\Users\killan\Documents\GitHub\IA_lab\Core_sharp\IA_Laboratorios\arkanoid\obj\Debug\arkanoid.csproj.GenerateResource.Cache
 C:\Users\killan\Documents\GitHub\IA_lab\Core_sharp\IA_Laboratorios\arkanoid\obj\Debug\arkanoid.dll
 C:\Users\killan\Documents\GitHub\IA_lab\Core_sharp\IA_Laboratorios\arkanoid\obj\Debug\arkanoid.pdb
+C:\Users\killan\Documents\GitHub\IA_lab\Core_sharp\IA_Laboratorios\arkanoid\obj\Debug\arkanoid.csprojResolveAssemblyReference.cache
