@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.arkanoid1 = new arkanoid.arkanoid();
+            this.arkanoid2 = new arkanoid.arkanoid();
             this.SuspendLayout();
             // 
             // timer1
@@ -38,21 +38,21 @@
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // arkanoid1
+            // arkanoid2
             // 
-            this.arkanoid1.Location = new System.Drawing.Point(12, 12);
-            this.arkanoid1.MaximumSize = new System.Drawing.Size(400, 400);
-            this.arkanoid1.MinimumSize = new System.Drawing.Size(400, 400);
-            this.arkanoid1.Name = "arkanoid1";
-            this.arkanoid1.Size = new System.Drawing.Size(400, 400);
-            this.arkanoid1.TabIndex = 0;
+            this.arkanoid2.Location = new System.Drawing.Point(14, 12);
+            this.arkanoid2.MaximumSize = new System.Drawing.Size(400, 500);
+            this.arkanoid2.MinimumSize = new System.Drawing.Size(400, 400);
+            this.arkanoid2.Name = "arkanoid2";
+            this.arkanoid2.Size = new System.Drawing.Size(400, 500);
+            this.arkanoid2.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 419);
-            this.Controls.Add(this.arkanoid1);
+            this.ClientSize = new System.Drawing.Size(426, 520);
+            this.Controls.Add(this.arkanoid2);
             this.Name = "Form1";
             this.Text = "Practica_1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
@@ -64,6 +64,7 @@
 
         private System.Windows.Forms.Timer timer1;
         private arkanoid.arkanoid arkanoid1;
+        private arkanoid.arkanoid arkanoid2;
 
     }
 }

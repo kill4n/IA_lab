@@ -34,14 +34,14 @@ namespace arkanoid
             wld = new Bitmap(20 * _mult, 20 * _mult);
             g = Graphics.FromImage(wld);
 
-            b = new bola(Math.PI / 4 + 0.01);
+            b = new bola(6 * Math.PI / 8);
             padd = new Base();
             padd.tamano = 80;
             padd.Y = 750;
 
             b.tamano = (int)(0.5 * _mult);
-            b.X = 10 * _mult;
-            b.Y = 10 * _mult;
+            b.X = 5 * _mult;
+            b.Y = 5 * _mult;
 
             for (int i = 0; i < 10; i++)
             {
@@ -67,8 +67,9 @@ namespace arkanoid
         /// <param name="e">Datos del evento</param>
         void arkanoid_ouch(object Sender, BloqueEventArgs e)
         {
-            //b.cambiodir();
+            // b.cambiodir();
         }
+
         /// <summary>
         /// Reflescar el juego
         /// </summary>
@@ -86,12 +87,12 @@ namespace arkanoid
                 }
             }
 
-            for (int i = 0; i < 10; i++)
-                for (int j = 0; j < 6; j++)
-                    bloques[i, j].Pintar(g);
+            //for (int i = 0; i < 10; i++)
+            //    for (int j = 0; j < 6; j++)
+            //        bloques[i, j].Pintar(g);
 
             b.mover();
-
+            label1.Text = "ang: " + b.angulo + " :X: " + (int)b.X + " :Y: " + (int)b.Y;
             pictureBox1.Image = wld;
         }
 
@@ -104,8 +105,6 @@ namespace arkanoid
                     break;
                 case DirPad.Izquierda:
                     padd.moverIzquierda();
-                    break;
-                default:
                     break;
             }
         }

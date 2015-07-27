@@ -11,8 +11,8 @@ namespace arkanoid
     /// </summary>
     public enum Direccion
     {
-        Horiz=0,
-        Verti=1
+        Horiz = 0,
+        Verti = 1
     }
 
     public class bola : Objeto
@@ -36,7 +36,7 @@ namespace arkanoid
         /// <summary>
         /// Velocidad de la bola.
         /// </summary>
-        private double spped = 2;
+        private double spped = 5;
 
         /// <summary>
         /// Constructor, recive elangulo inicial.
@@ -64,34 +64,45 @@ namespace arkanoid
             var tmpX = X + (spped * Math.Cos(_ang));
             var tmpY = Y + (spped * Math.Sin(_ang));
 
-            if ((tmpX <= 0) && (tmpX + tamano >= 800))
+            if (((tmpX < 0) ||
+                ((tmpX + tamano) > 800)) ||
+                ((tmpY < 0) ||
+                ((tmpY + tamano) > 800)))
             {
-                cambiodir(Direccion.Horiz);
+                cambiodir();
+                X += spped * Math.Cos(_ang);
+                Y += spped * Math.Sin(_ang);
             }
-            if ((tmpY <= 0) && (tmpY + tamano >= 800))
+            else
             {
-                cambiodir(Direccion.Verti);
+                X += spped * Math.Cos(_ang);
+                Y += spped * Math.Sin(_ang);
             }
-            
-            X += spped * Math.Cos(_ang);
-            Y += spped * Math.Sin(_ang);
         }
         /// <summary>
         /// Cambiar la direccion de la bola
         /// </summary>
         /// <param name="d">direccion pendiente</param>
-        public void cambiodir(Direccion d)
+        public void cambiodir()
         {
-            switch (d)
+            if ((Y + tamano >= 750))
             {
-                case Direccion.Horiz:
-                    break;
-                case Direccion.Verti:
-                    break;
-                default:
-                    break;
+                _ang *= -1;
             }
-            _ang *= -1;// (Math.PI / 2) + r.NextDouble() * 0.01;
+            else
+            {
+                if ((Y <= 0))
+                {
+                    _ang = Math.Abs(_ang);
+                }
+                else
+                {
+                    _ang = Math.PI - _ang;// (Math.PI / 2) + r.NextDouble() * 0.01;
+                }
+
+            }
+
+
         }
     }
 }
