@@ -41,21 +41,21 @@ namespace arkanoid
         }
         public override void Pintar(Graphics g)
         {
-            //if (isActivo)
-                //g.FillRectangle(new SolidBrush(_color), (int)X, (int)Y, 70, 30);
+            if (isActivo)
+                g.FillRectangle(new SolidBrush(_color), (int)X, (int)Y, 70, 30);
         }
 
         public void validarColision(bola b)
         {
             if (_activo)
             {
-                //if (((b.X + 20 >= X) & (b.X <= (X + 70))) &&
-                //    ((b.Y + 20 >= Y) & (b.Y <= (Y + 30))))
-                //{
-                //    _activo = false;
-                //    if (ouch != null)
-                //        ouch(this, new BloqueEventArgs(1));
-                //}
+                if (((b.X + 20 >= X) & (b.X <= (X + 70))) &&
+                    ((b.Y + 20 >= Y) & (b.Y <= (Y + 30))))
+                {
+                    _activo = false;
+                    if (ouch != null)
+                        ouch(this, new BloqueEventArgs(1));
+                }
 
             }
         }
