@@ -1,0 +1,4 @@
+C:\Users\Crhisitan\Documents\GitHub\IA_lab\Core_sharp\IA_Laboratorios\Agent0\bin\Debug\Agent0.dll
+C:\Users\Crhisitan\Documents\GitHub\IA_lab\Core_sharp\IA_Laboratorios\Agent0\bin\Debug\Agent0.pdb
+C:\Users\Crhisitan\Documents\GitHub\IA_lab\Core_sharp\IA_Laboratorios\Agent0\obj\Debug\Agent0.dll
+C:\Users\Crhisitan\Documents\GitHub\IA_lab\Core_sharp\IA_Laboratorios\Agent0\obj\Debug\Agent0.pdb

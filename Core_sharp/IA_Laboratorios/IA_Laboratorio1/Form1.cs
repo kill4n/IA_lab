@@ -14,6 +14,14 @@ namespace IA_Laboratorio1
         public Form1()
         {
             InitializeComponent();
+            
+            timer1.Start();
+        }
+
+       
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            arkanoid1.refreshGame();
         }
     }
 }

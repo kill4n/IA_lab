@@ -28,35 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.arkanoid1 = new arkanoid.arkanoid();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // timer1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(452, 290);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // arkanoid1
+            // 
+            this.arkanoid1.Location = new System.Drawing.Point(12, 12);
+            this.arkanoid1.MaximumSize = new System.Drawing.Size(400, 400);
+            this.arkanoid1.MinimumSize = new System.Drawing.Size(400, 400);
+            this.arkanoid1.Name = "arkanoid1";
+            this.arkanoid1.Size = new System.Drawing.Size(400, 400);
+            this.arkanoid1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 365);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(426, 419);
+            this.Controls.Add(this.arkanoid1);
             this.Name = "Form1";
             this.Text = "Practica_1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
+        private arkanoid.arkanoid arkanoid1;
 
     }
 }
