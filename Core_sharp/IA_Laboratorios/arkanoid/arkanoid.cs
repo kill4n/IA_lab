@@ -11,19 +11,25 @@ namespace arkanoid
 {
     public partial class arkanoid : UserControl
     {
+        #region Variables
         int _mult = 40;
         Bitmap wld;
         Graphics g;
         bola b;
         Base padd;
-        Bloque[,] bloques = new Bloque[10, 6];
+        Bloque[,] bloques = new Bloque[10, 6]; 
+        #endregion
+     
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public arkanoid()
         {
             InitializeComponent();
             wld = new Bitmap(20 * _mult, 20 * _mult);
             g = Graphics.FromImage(wld);
 
-            b = new bola(Math.PI / 4+0.01);
+            b = new bola(Math.PI / 4 + 0.01);
             padd = new Base();
             padd.tamano = 80;
             padd.Y = 750;
@@ -49,15 +55,20 @@ namespace arkanoid
             refreshGame();
         }
 
+        /// <summary>
+        /// Funcion de colision
+        /// </summary>
+        /// <param name="Sender">objeto que colisiono</param>
+        /// <param name="e">Datos del evento</param>
         void arkanoid_ouch(object Sender, BloqueEventArgs e)
         {
-            b.cambiodir(e.data);
+            //b.cambiodir();
         }
-
-
+        /// <summary>
+        /// Reflescar el juego
+        /// </summary>
         public void refreshGame()
         {
-
             g.Clear(Color.Aqua);
             b.Pintar(g);
             padd.Pintar(g);
@@ -79,5 +90,6 @@ namespace arkanoid
 
             pictureBox1.Image = wld;
         }
+
     }
 }
